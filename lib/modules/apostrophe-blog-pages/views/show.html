@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<h1 id="blog-title">{{ data.piece.title }}</h1>
+</br>
+
+{{ apos.area(data.piece, 'main', {
+    widgets: {
+      'apostrophe-rich-text': {
+         toolbar: [ 'Styles', 'Bold', 'Italic', 'Blockquote', 'Link', 'Anchor', 'Unlink', 'BulletedList' ],
+         styles: [
+           { name: 'Title', element: 'h3' },
+           { value: 'h5', label: 'Subtitle' },
+           { name: 'Paragraph', element: 'p' }
+         ]
+       },
+      'apostrophe-images': {
+        minSize: [ 700, 350 ],
+        aspectRatio: [ 2, 1 ],
+        size: 'full'
+      },
+      'apostrophe-video': {}
+    }
+  }) }}
+
+{% endblock %}
