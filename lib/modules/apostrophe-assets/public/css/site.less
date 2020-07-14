@@ -3,6 +3,8 @@
 // Delete the boilerplate CSS below when you are ready to dive in and customize your sites:
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-content {
@@ -149,4 +151,28 @@ apos-area-widget-wrapper h4 {
   -moz-transition: background 0.3s ease-out;
   -o-transition: background 0.3s ease-out;
   transition: background 0.3s ease-out;
+}
+
+.footer-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  height: 80px;
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#location {
+  padding-left: 10px;
+  padding-top: 18px;
 }
