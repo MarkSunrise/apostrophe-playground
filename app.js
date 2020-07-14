@@ -2,6 +2,7 @@ var path = require('path');
 
 var apos = require('apostrophe')({
   shortName: 'mark-test-cms',
+  nestedModuleSubdirs: true,
 
   // See lib/modules for basic project-level configuration of our modules
   // responsible for serving static assets, managing page templates and
@@ -21,6 +22,7 @@ var apos = require('apostrophe')({
     // `views/` folder of the project
 
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
+    'marks-theme': {},
     'apostrophe-seo': {},
     'apostrophe-open-graph': {},
     'apostrophe-blog': {
@@ -42,8 +44,13 @@ var apos = require('apostrophe')({
         {
           name: 'about',
           label: 'About'
+        },
+        {
+          name: 'faq',
+          label: 'FAQ'
         }
       ]
-  },
+    },
+    'three-column-widgets': {},
   }
 });

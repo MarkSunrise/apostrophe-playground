@@ -2,18 +2,19 @@
 
 // Delete the boilerplate CSS below when you are ready to dive in and customize your sites:
 body {
-  background-color: @apos-light;
-  font-family: "Source Sans Pro", "Arial", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .main-content {
   font-family: 'Karla', sans-serif;
   margin: 20px auto;
   padding: 20px;
-  max-width: 500px;
-  color: @apos-white;
-  background-color: @apos-primary;
-  .apos-drop-shadow;
+  max-width: 1110px;
+  color: black;
+
+  p {
+    max-width: 1080px;
+  }
 
   .login-link {
     float: right;
@@ -22,6 +23,7 @@ body {
 
   // Basic rich-text editor styles:
   h3 {
+    max-width: 1080px;
     font-size: 24px;
     margin-bottom: 12px;
   }
@@ -38,10 +40,6 @@ body {
   em {
     font-style: italic;
   }
-}
-
-.apos-refreshable {
-  padding: 129px;
 }
 
 .apos-blog-post-preview {
@@ -67,24 +65,41 @@ body {
 }
 
 #menu-outer {
-  height: 100px;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  height: 80px;
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
 
-.table {
-  display: table;
-  // margin: 0 auto;
-}
+  ul#horizontal-list {
+    min-width: 696px;
+    list-style: none;
+    padding-top: 20px;
+  }
 
-ul#horizontal-list {
-  min-width: 696px;
-  list-style: none;
-  padding-top: 20px;
-}
+  ul#horizontal-list li {
+    display: inline;
+    font-size: 20px;
+    padding-right: 20px;
+  }
 
-ul#horizontal-list li {
-  display: inline;
-  font-size: 20px;
-  padding-right: 20px
+  ul#horizontal-list li {
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 2px solid #fff600;
+        text-decoration: none;
+      }
+    }
+
+  }
+
 }
 
 apos-area-widget-wrapper h4 {
@@ -93,4 +108,45 @@ apos-area-widget-wrapper h4 {
 
 #blog-title {
   font-size: 25px;
+}
+
+.header {
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: #000000;
+  display: block;
+}
+
+.headerList {
+  display: inline-block;
+  padding: 0 0.4em;
+  letter-spacing: 1px;
+  padding-top: 15px;
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.schedule-button {
+  font-family: 'Questrial', Arial, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  display: inline-block;
+  background: none;
+  color: #000;
+  border: 2px solid #000;
+  font-weight: 600;
+  border-radius: 35px;
+  padding: 10px 25px;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease-out;
+  -moz-transition: background 0.3s ease-out;
+  -o-transition: background 0.3s ease-out;
+  transition: background 0.3s ease-out;
 }

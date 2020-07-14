@@ -14,21 +14,43 @@
         widgets: {
             'apostrophe-blog': {},
             'apostrophe-images': {
-                size: 'full'
-                },
-                'apostrophe-rich-text': {
+                size: 'full',
+                minSize: [ 700, 350 ],
+                aspectRatio: [ 2, 1 ],
+                limit: 1
+            },
+            'apostrophe-rich-text': {
                 toolbar: [ 'Styles', 'Bold', 'Italic', 'Blockquote', 'Link', 'Anchor', 'Unlink', 'BulletedList' ],
-                styles: [
-                    { name: 'H1', element: 'h1' },
-                    { name: 'H2', element: 'h2' },
-            { name: 'H3', element: 'h3' },
-                    { name: 'H4', element: 'h4' },
-            { name: 'H5', element: 'h5' },
-                    { name: 'H6', element: 'h6' },
-                    { name: 'Paragraph', element: 'p' }
-                ]
-                },
+                    styles: [
+                        { element: 'p', name: 'Paragraph' },
+                        {
+                        element: 'p',
+                        name: 'Featured text',
+                        attributes: { class: 'featured-text' }
+                        },
+                        {
+                        element: 'h3',
+                        name: 'Section title',
+                        attributes: { class: 'section-heading' }
+                        }
+                    ]
+            },
             'apostrophe-video': {}
+        }
+    }) }}
+    <br />
+    {{ apos.singleton(data.page, 'textBlock', 'apostrophe-rich-text', {
+        toolbar: [ Styles, Bold, Italic, Link, Unlink, Anchor, Table, BulletedList, Blockquote, Strike, Subscript, Superscript, Split ]
+    }) }}
+    {{ apos.singleton(data.page, 'image', 'apostrophe-images', {
+        limit: 1,
+        minSize: [ 1200, 600 ],
+        addLabel: 'Set the logo',
+        editLabel: 'Change the logo',
+        controls: {
+          movable: false,
+          removable: true,
+          position: 'bottom-right'
         }
     }) }}
 </div>

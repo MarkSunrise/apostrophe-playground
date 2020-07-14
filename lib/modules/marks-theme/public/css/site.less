@@ -1,0 +1,139 @@
+@import "utils/reset.less";
+
+// Delete the boilerplate CSS below when you are ready to dive in and customize your sites:
+
+// body {
+//     font-family: Helvetica, Sans;
+// }
+
+// header {
+//     background-color: #def;
+//     max-width: 1200px;
+//     margin: auto;
+//     padding-top: 16px;
+
+//     h1 {
+//         margin: 32px 0;
+//         font-size: 48px;
+//         text-align: center;
+//     }
+// }
+
+// main {
+//     background-color: #fefeff;
+//     border-top: 2px solid #345;
+//     max-width: 1200px;
+//     margin: auto;
+//     min-height: 600px;
+//     padding: 32px;
+// }
+
+.tabs {
+    margin: auto;
+    list-style: none;
+    text-align: center;
+
+    .tab {
+        display: inline-block;
+        padding: 20px;
+
+        a {
+            text-decoration: underline;
+            color: inherit;
+        }
+
+        &.active {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.breadcrumbs {
+    list-style: none;
+    padding: 20px 32px;
+
+    .breadcrumb {
+        display: inline-block;
+
+        &:after {
+            content: ' » ';
+            display: inline-block;
+            padding: 0 16px;
+        }
+
+        &:last-child:after {
+            content: '';
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+.two-column-area {
+    float: left;
+    width: 50%;
+}
+
+.three-column-area {
+    float: left;
+    width: 33.33333%;
+}
+
+.apos-image-widget-image-title {
+    display: none;
+}
+
+
+.mark-main-content {
+    font-family: 'Karla', sans-serif;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1080px;
+    color: @apos-white;
+    background-color: #212155;
+    .apos-drop-shadow;
+
+    .login-link {
+        float: right;
+        color: @apos-white;
+    }
+
+    // Basic rich-text editor styles:
+
+    h1 {
+        font-size: 50px;
+        color: yellow;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin-bottom: 12px;
+        border: 1px solid blue;
+    }
+
+    h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    div {
+        font-size: 14px;
+    }
+
+    p {
+        color: red;
+    }
+}
