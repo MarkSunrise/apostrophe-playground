@@ -4,6 +4,7 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -13,6 +14,7 @@ body {
   padding: 20px;
   max-width: 1110px;
   color: black;
+  flex: 1;
 
   p {
     max-width: 1080px;
@@ -154,11 +156,12 @@ apos-area-widget-wrapper h4 {
 }
 
 .footer-container {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   padding-bottom: 50px;
+  padding-top: 20px;
+  margin-top: -50px;
 }
 
 #footer {
@@ -166,7 +169,7 @@ apos-area-widget-wrapper h4 {
   justify-content: space-between;
   align-items: center;
   padding-top: 15px;
-  height: 80px;
+  max-height: 80px;
   max-width: 1080px;
   width: 100%;
   margin: 0 auto;
