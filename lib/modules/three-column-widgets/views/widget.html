@@ -1,10 +1,24 @@
+{# Three column widgets are just three one column widgets sharing an 'area' #}
+{# this is the markup template to display the configured widget (app.js & index.js) #}
 {% import "macros/utils.html" as utils %}
+
+
+{# parent = data.widget, name = 'one', imageSize = 'one-third' #}
+{# One column widget that allows rich text, images, and video #}
 <div class="three-column-area">
   {{ utils.column(data.widget, 'one', 'one-third') }}
 </div>
+
+
+{# parent = data.widget, name = 'two', imageSize = 'one-third' #}
+{# One column widget that allows rich text, images, and video #}
 <div class="three-column-area">
   {{ utils.column(data.widget, 'two', 'one-third') }}
 </div>
+
+
+{# parent = data.widget, name = 'three', imageSize = 'one-third' #}
+{# One column widget that allows rich text, images, and video #}
 <div class="three-column-area">
   {{ utils.column(data.widget, 'three', 'one-third') }}
 </div>

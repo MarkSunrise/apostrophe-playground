@@ -51,6 +51,8 @@ var apos = require('apostrophe')({
         }
       ]
     },
+    'one-column-widgets': {},
+    'two-column-widgets': {},
     'three-column-widgets': {},
   }
 });

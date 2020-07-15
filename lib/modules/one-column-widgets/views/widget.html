@@ -1,0 +1,5 @@
+{# this is the markup template to display the configured widget (app.js & index.js) #}
+{% import "macros/utils.html" as utils %}
+{# parent = data.widget, name = 'one', imageSize = 'full' #}
+{# One column widget that allows rich text, images, and video #}
+{{ utils.column(data.widget, 'one', 'full') }}

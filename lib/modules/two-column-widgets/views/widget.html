@@ -1,0 +1,17 @@
+{# Two column widgets are just two one column widgets sharing an 'area' #}
+{# this is the markup template to display the configured widget (app.js & index.js) #}
+{% import "macros/utils.html" as utils %}
+
+
+{# parent = data.widget, name = 'one', imageSize = 'one-half' #}
+{# One column widget that allows rich text, images, and video #}
+<div class="two-column-area">
+  {{ utils.column(data.widget, 'one', 'one-half') }}
+</div>
+
+
+{# parent = data.widget, name = 'two', imageSize = 'one-half' #}
+{# One column widget that allows rich text, images, and video #}
+<div class="two-column-area">
+  {{ utils.column(data.widget, 'two', 'one-half') }}
+</div>
