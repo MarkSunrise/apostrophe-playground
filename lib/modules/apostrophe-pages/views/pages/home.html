@@ -4,15 +4,8 @@
 {% block main %}
 
 <div class="main-content">
-    {# {{ utils.columns() }} #}
-    {{ apos.area(data.page, 'main', {
-        blockLevelControls: true,
-        widgets: {
-        'one-column': {},
-        'two-column': {},
-        'three-column': {}
-        }
-    }) }}
+    {# {% import "macros/utils.html" as utils with context %} #}
+    {{ utils.columns() }}
     <h3>Hello Home page!
         {% if not data.user %}
         <a class="login-link" href="/login">Login</a>
