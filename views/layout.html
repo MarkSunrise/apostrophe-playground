@@ -23,6 +23,7 @@
 
 {% block beforeMain %}
 {% import "macros/utils.html" as utils with context %}
+{# {% import "macros/utils-page.html" as utils-page with context %} #}
 {#
     We recommend you use the beforeMain block for global page components
     like headers or navigation.
@@ -88,7 +89,9 @@
 {#
 <div>Global footer goes here</div>
 #}
-<div class="footer-container">
+
+
+{# <div class="footer-container">
   <div id="footer">
     <div style="height:80px">
       <div>
@@ -180,6 +183,6 @@
       </div>
     </div>
   </div>
-</div>
+</div> #}
 
 {% endblock %}

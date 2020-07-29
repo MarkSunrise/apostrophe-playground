@@ -34,6 +34,10 @@ var apos = require('apostrophe')({
       previous: true
     },
     'apostrophe-blog-widgets': {},
+    //this creates the dynamic pages from the slug
+    'connections': {
+      extend: 'apostrophe-custom-pages',
+    },
     'apostrophe-pages': {
       // We must list `apostrophe-blog-page` as one of the available page types
       types: [
@@ -48,6 +52,14 @@ var apos = require('apostrophe')({
         {
           name: 'faq',
           label: 'FAQ'
+        },
+        {
+          name: 'connector',
+          label: 'Connector'
+        },
+        {
+          name: 'connections',
+          label: 'Connections'
         }
       ]
     },
